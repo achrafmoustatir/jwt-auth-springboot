@@ -85,10 +85,7 @@ jwt-auth-springboot/
 │    │       
 │    │
 │    └── resources/
-│        ├── application.properties     → Config globale
-│        ├── static/                    → Fichiers statiques (HTML, CSS, JS)
-│        ├── templates/                 → Pages Thymeleaf (si app web)
-│        └── messages.properties        → Messages d’erreur / i18n
+│        └──application.properties     → Config globale
 │
 │├── docs/
 │	  └── authJWT.png
