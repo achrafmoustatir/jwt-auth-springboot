@@ -187,7 +187,7 @@ Below is a simplified sequence of how authentication works:
 
 ### 📊 Sequence Diagram
 
-![JWT Flow Diagram](/docs/jwt-flow.png)
+![JWT Flow Diagram](/docs/authJWT.png)
 
 ---
 
