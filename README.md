@@ -36,25 +36,64 @@ It allows users to register, log in, and access protected routes only when authe
 ```
 jwt-auth-springboot/
 │
-├── src/main/java/com/achraf/security/
-│   ├── controller/
-│   │   └── AuthController.java
-│   ├── service/
-│   │   ├── AuthService.java
-│   │   └── CustomUserDetailsService.java
-│   ├── config/
-│   │   └── SecurityConfig.java
-│   ├── model/
-│   │   └── User.java
-│   ├── repository/
-│   │   └── UserRepository.java
-│   ├── util/
-│   │   └── JwtUtil.java
-│   └── JwtAuthSpringbootApplication.java
+├── src/
+└── main/
+│    ├── java/
+│    │   └── com/achraf/security/
+│    │       ├── config/                → Fichiers de configuration (Security, CORS, Beans…)
+│    │       │    └── WebConfig.java
+│    │       │
+│    │       ├── controller/            → Couche "Controller" (C du MVC)
+│    │       │    ├── UserController.java
+│    │       │    └── AuthController.java
+│    │       │
+│    │       ├── service/               → Couche "Service" (Business Logic)
+│    │       │    ├── AuthService.java         ← Interface
+│    │       │    ├── UserService.java         ← Interface
+│    │       │    └── impl/                   ← Implémentations concrètes
+│    │       │         ├── UserServiceImpl.java
+│    │       │         └── AuthServiceImpl.java
+│    │       │
+│    │       ├── repository/            → Couche "Model" (accès BD)
+│    │       │    └── UserRepository.java
+│    │       │
+│    │       ├── model/                 → Entités JPA (classes mappées sur les tables)
+│    │       │    └── User.java
+│    │       │
+│    │       ├── dto/                   → Objets de transfert (simplifient la comm entre couches)
+│    │       │    ├── UserDTO.java
+│    │       │    ├── AuthRequest.java
+│    │       │    └── AuthResponse.java
+│    │       │
+│    │       ├── mapper/                → MapStruct ou conversion entre Entity ↔ DTO
+│    │       │    └── UserMapper.java
+│    │       │
+│    │       ├── exception/             → Gestion des exceptions personnalisées
+│    │       │    ├── ResourceNotFoundException.java
+│    │       │    └── GlobalExceptionHandler.java
+│    │       │
+│    │       ├── security/              → Config et filtres JWT/Spring Security (si besoin)
+│    │       │    ├── JwtFilter.java
+│    │       │    ├── CustomUserDetailsService.java
+│    │       │    ├── JwtUtil.java
+│    │       │    └── SecurityConfig.java
+│    │       │
+│    │       ├── util/                  → Fonctions utilitaires (validation, formatage, etc.)
+│    │       │    └── DateUtils.java
+│    │       │
+│    │       ├── DemoApplication.java   → Classe principale (point d’entrée)
+│    │       
+│    │
+│    └── resources/
+│        ├── application.properties     → Config globale
+│        ├── static/                    → Fichiers statiques (HTML, CSS, JS)
+│        ├── templates/                 → Pages Thymeleaf (si app web)
+│        └── messages.properties        → Messages d’erreur / i18n
 │
-├── src/main/resources/
-│   └── application.properties
+│├── docs/
+│	  └── authJWT.png
 │
+├── .gitignore
 ├── pom.xml
 └── README.md
 ```
