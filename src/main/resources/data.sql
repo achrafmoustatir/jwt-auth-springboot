@@ -1,0 +1,2 @@
+-- Example: create a user for tests (password encoded with BCrypt for 'password')
+-- You must run an insert after starting the app or adapt to your encoder.
