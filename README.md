@@ -202,7 +202,7 @@ Below is a simplified sequence of how authentication works:
 ## 🧑‍💻 Author
 
 **Achraf Moustatir**  
-🔗 [GitHub Profile](https://github.com/<your-username>)
+🔗 [GitHub Profile](https://github.com/achrafmoustatir)
 
 ---
 
